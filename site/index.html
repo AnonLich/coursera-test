@@ -7,20 +7,11 @@
   <title>Solkustturer</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="SolkustLogga.jpg" width="200" height="150" alt="" /></a>
-        </div>
-
-        <ul class="nav-links">
-                <li><a href="#">Blå Jungfrun</a></li>
-                <li><a href="#">Räkkryssningar</a></li>
-                <li><a href="#">Skärgårdsturer</a></li>
-                <li><a href="#">Charter</a></li>
-        </ul>
-    </nav>
-
-        <section class="showcase">
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Solkustturer</h2>
+            <div class="toggle"></div>
+        </header>
 
        <video src="Solkustturer musikquiz1.mp4" loop autoplay></video>
 
@@ -38,7 +29,23 @@
         </ul>
     </section>
 
+    <div class="menu">
+        <ul>
+            <li><a href="#">Blå Jungfrun</a></li>
+            <li><a href="#">Räkkryssningar</a></li>
+            <li><a href="#">Skärgårdsturer</a></li>
+            <li><a href="#">Charter</a></li>
+        </ul>
+    </div>
 
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
 
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>
